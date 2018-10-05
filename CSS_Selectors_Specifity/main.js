@@ -32,7 +32,7 @@ const compare = (a, b) => {
 };
 
 const calculateSpecificity = (selector = "") => {
-  decomposedSelector = selector.split(" ");
+  decomposedSelector = splitSelector(selector);
   return decomposedSelector.reduce((accumulator, currentSelector) => {
     return accumulator + getSpecificity(currentSelector);
   }, 0);
@@ -45,7 +45,14 @@ const getSpecificity = (selector) => {
   }, 0);
 };
 
+const splitSelector = (selector) => {
+  return selector.split(" ").map((subselector) => {
+    return subselector.split(":not(");
+  }).reduce((acc, val) => acc.concat(val), []); //flatMap not yet working
+};
+
 module.exports = {
   compare,
-  calculateSpecificity
+  calculateSpecificity,
+  splitSelector
 };

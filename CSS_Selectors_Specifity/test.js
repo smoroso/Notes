@@ -1,5 +1,5 @@
 const assert = require("chai").assert;
-const { compare, calculateSpecificity } = require("./main");
+const { compare, calculateSpecificity, splitSelector } = require("./main");
 
 describe("calculateSpecificity", function() {
   describe("simple selectors", function() {
@@ -18,6 +18,8 @@ describe("calculateSpecificity", function() {
 
     it("works for a pseudo-class selector", function() {
       assert.equal(calculateSpecificity(":hover"), 10);
+      assert.equal(calculateSpecificity(":nth-child(1n+0)"), 10);
+      assert.equal(calculateSpecificity(":lang(fr)"), 10);
     });
 
     it("works for an attribute selector", function() {
@@ -39,6 +41,15 @@ describe("calculateSpecificity", function() {
     });
   });
 
+  describe("#splitSelector", function() {
+    it("works", function() {
+      assert.equal(splitSelector("div p").length, 2);
+      assert.equal(splitSelector("div p#content a").length, 3);
+      assert.equal(splitSelector("div:not(p)").length, 2);
+      assert.equal(splitSelector("div:lang(fr)").length, 1);
+    });
+  });
+
   describe("nested selectors", function() {
     it("works for different valid selectors combination", function() {
       assert.equal(calculateSpecificity("p a.foo"), 12);
@@ -48,6 +59,16 @@ describe("calculateSpecificity", function() {
       assert.equal(calculateSpecificity("div.big a#foo"), 112);
       assert.equal(calculateSpecificity(".foo .bar a#foo:hover"), 131);
       assert.equal(calculateSpecificity("div.foo p#desc span[id='foo']::before"), 124);
+    });
+  });
+
+  describe("no-effect selectors", function() {
+    it("does not change the specificty value", function() {
+      assert.equal(calculateSpecificity("*"), 0);
+      assert.equal(calculateSpecificity("p > a.foo"), calculateSpecificity("p a.foo"));
+      assert.equal(calculateSpecificity("div + p"), calculateSpecificity("div p"));
+      assert.equal(calculateSpecificity("div ~ p"), calculateSpecificity("div p"));
+      assert.equal(calculateSpecificity("div:not(p)"), calculateSpecificity("div p"));
     });
   });
 
