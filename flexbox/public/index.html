@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox Examples</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div id="list">
+      <h1>List of options</h1>
+      <ul>
+        <li><a href="#vanilla">vanilla</a></li>
+        <li><a href="#flex-direction">flex-direction</a></li>
+        <li><a href="#flex-wrap">flex-wrap</li></a>
+        <li><a href="#flex-flow">flex-flow</li></a>
+        <li><a href="#justify-content">justify-content</a></li>
+        <li><a href="#align-items">align-items</a></li>
+        <li><a href="#align-content">align-content</a></li>
+        <li><a href="#perfect-centering">perfect-centering</a></li>
+      </ul>
+    </div>
+
+    <!-- Default -->
+    <div id="default">
+      <h1>Default</h1>
+      <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+      <a class="anchor" href="#list">Back up!</a>
+    </div>
+
+    <hr/>
+
+    <!-- Vanilla  -->
+    <div id="vanilla">
+      <h1>Vanilla</h1>
+      <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+      <a class="anchor" href="#list">Back up!</a>
+    </div>
+
+    <hr/>
+
+    <!-- Flex Direction -->
+    <div id="flex-direction">
+      <h1>Flex Direction</h1>
+      <div>
+        <h2>Column</h2>
+        <div class="flex-container column">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Column-reverse</h2>
+        <div class="flex-container column-reverse">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Row (default)</h2>
+        <div class="flex-container row">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Row-reverse</h2>
+        <div class="flex-container row-reverse">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Flex Wrap -->
+    <div id="flex-wrap">
+      <h1>Flex Wrap</h1>
+      <div>
+        <h2>Wrap</h2>
+        <div class="flex-container wrap">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Nowrap (default)</h2>
+        <div class="flex-container nowrap">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Wrap-reverse</h2>
+        <div class="flex-container wrap-reverse">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Flex Flow -->
+    <div id="flex-flow">
+      <h1>Flex Flow (shorthand for flex-direction and flex-wrap)</h1>
+      <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+        <div class="flex-item">10</div>
+        <div class="flex-item">11</div>
+        <div class="flex-item">12</div>
+        <div class="flex-item">13</div>
+        <div class="flex-item">14</div>
+        <div class="flex-item">15</div>
+      </div>
+      <a class="anchor" href="#list">Back up!</a>
+    </div>
+
+    <hr/>
+
+    <!-- Justify Content -->
+    <div id="justify-content">
+      <h1>Justify Content</h1>
+      <div>
+        <h2>Center</h2>
+        <div class="flex-container center">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-start</h2>
+        <div class="flex-container flex-start">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-end</h2>
+        <div class="flex-container flex-end">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Space-around</h2>
+        <div class="flex-container space-around">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Space-between</h2>
+        <div class="flex-container space-between">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Align Items -->
+    <div id="align-items">
+      <h1>Align Items</h1>
+      <div>
+        <h2>Center</h2>
+        <div class="flex-container center">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-start</h2>
+        <div class="flex-container flex-start">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-end</h2>
+        <div class="flex-container flex-end">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Stretch (default)</h2>
+        <div class="flex-container stretch">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Baseline</h2>
+        <div class="flex-container baseline">
+          <div class="flex-item"><h1>1</h1></div>
+          <div class="flex-item"><h2>2</h2></div>
+          <div class="flex-item"><h6>3</h6></div>
+          <div class="flex-item"><small>4</small></div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Align Content -->
+    <div id="align-content">
+      <h1>Align Center</h1>
+      <div>
+        <h2>Center</h2>
+        <div class="flex-container center">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-start</h2>
+        <div class="flex-container flex-start">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-end</h2>
+        <div class="flex-container flex-end">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Stretch (default)</h2>
+        <div class="flex-container stretch">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Space-around</h2>
+        <div class="flex-container space-around">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Space-between</h2>
+        <div class="flex-container space-between">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Child Elements -->
+    <div id="child-elements">
+      <h1>Child Elements</h1>
+      <div>
+        <h2>Order</h2>
+        <div class="flex-container order">
+          <div class="flex-item first-item">1</div>
+          <div class="flex-item second-item">2</div>
+          <div class="flex-item third-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-grow</h2>
+        <div class="flex-container flex-grow">
+          <div class="flex-item first-item">1</div>
+          <div class="flex-item second-item">2</div>
+          <div class="flex-item third-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-shrink</h2>
+        <div class="flex-container flex-shrink">
+          <div class="flex-item first-item">1</div>
+          <div class="flex-item second-item">2</div>
+          <div class="flex-item third-item">3</div>
+          <div class="flex-item">4</div>
+          <div class="flex-item">5</div>
+          <div class="flex-item">6</div>
+          <div class="flex-item">7</div>
+          <div class="flex-item">8</div>
+          <div class="flex-item">9</div>
+          <div class="flex-item">10</div>
+          <div class="flex-item">11</div>
+          <div class="flex-item">12</div>
+          <div class="flex-item">13</div>
+          <div class="flex-item">14</div>
+          <div class="flex-item">15</div>
+          <div class="flex-item">16</div>
+          <div class="flex-item">17</div>
+          <div class="flex-item">18</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex-basis</h2>
+        <div class="flex-container flex-basis">
+          <div class="flex-item first-item">1</div>
+          <div class="flex-item second-item">2</div>
+          <div class="flex-item third-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Flex (shorthand for flex-grow, flex-shrink and flex-basis)</h2>
+        <div class="flex-container flex">
+          <div class="flex-item first-item">1</div>
+          <div class="flex-item second-item">2</div>
+          <div class="flex-item third-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+      <div>
+        <h2>Align-self</h2>
+        <div class="flex-container align-self">
+          <div class="flex-item first-item">1</div>
+          <div class="flex-item second-item">2</div>
+          <div class="flex-item third-item">3</div>
+        </div>
+        <a class="anchor" href="#list">Back up!</a>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Perfect Centering -->
+    <div id="perfect-centering">
+      <h1>Perfect Centering</h1>
+      <div class="flex-container perfect-align">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+      <a class="anchor" href="#list">Back up!</a>
+    </div>
+  </body>
+</html>
