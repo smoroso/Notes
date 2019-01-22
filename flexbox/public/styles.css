@@ -176,7 +176,7 @@ body {
 
 /* Flex */
 #child-elements .flex .first-item {
-  flex-grow: 1 1 20%;
+  flex: 1 1 20%;
 }
 
 #child-elements .flex .second-item {
