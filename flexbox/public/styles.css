@@ -3,9 +3,13 @@ body {
   padding: 0;
 }
 
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 [class^="flex-container"] {
   background-color: #1E90FF;
-
 }
 
 .flex-container {
